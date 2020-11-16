@@ -31,7 +31,6 @@ class Literal(object):
         return not self._positive
 
     def ground(self, subst):
-        print('SIIIII')
         ground_predicate = self._predicate.ground(subst)
         if self.is_positive():
             return Literal.positive(ground_predicate)
